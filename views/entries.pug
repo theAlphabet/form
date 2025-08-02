@@ -1,0 +1,28 @@
+//- extends layout
+html 
+  head
+    title= title 
+  body 
+    block content
+      h1 User Entries
+      if entriesData && entriesData.length
+        table
+          thead
+            tr
+              th ID
+              th First Name
+              th Last Name
+          tbody
+            each entry in entriesData
+              tr
+                td= entry.id
+                td= entry.firstName
+                td= entry.lastName
+      else
+        p No entriesData found.
+
+//- html 
+//-   head 
+//-     title Entries 
+//-   body 
+//-     p These are the entries 
